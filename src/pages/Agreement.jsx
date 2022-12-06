@@ -2,16 +2,17 @@ import React from 'react';
 import AppLayout from '../layouts/AppLayout';
 import { setMetaData } from '../utils/setMetaData';
 
-export default function Community() {
+export default function Agreement() {
   const meta = setMetaData({
-    title: '커뮤니티',
-    url: '/community',
+    title: '이용약관 & 개인정보처리방침',
+    url: '/agree',
   });
 
   return (
     <>
       <AppLayout meta={meta}>
-        <div>커뮤니티</div>
+        <div>약관 동의</div>
+        <div>개인정보 처리방침</div>
       </AppLayout>
     </>
   );

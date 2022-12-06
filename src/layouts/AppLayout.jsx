@@ -7,9 +7,11 @@ export default function AppLayout({children, meta}) {
     <>
       <Meta meta={meta} />
       <Header />
+
       <Main>
         {children}
       </Main>
+
       <Footer />
     </>
   );
