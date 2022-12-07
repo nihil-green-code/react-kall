@@ -7,6 +7,7 @@ import ETC from './pages/ETC';
 import Home from './pages/Home';
 import Item from './pages/Item';
 import NotFound from './pages/NotFound';
+import Search from './pages/Search';
 import SighIn from './pages/SighIn';
 import SighUp from './pages/SighUp';
 import Test from './pages/Test';
@@ -43,6 +44,9 @@ const App = () => {
 
           {/* 상품 상세 페이지 */}
           <Route path='/item/:id' element={<Item />} />
+
+          {/* 검색 페이지 */}
+          <Route path='/search' element={<Search />} />
 
           {/* 그 외의 모든 주소는 없는 페이지로 구현 */}
           <Route path='/*' element={<NotFound />} />

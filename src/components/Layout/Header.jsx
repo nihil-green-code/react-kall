@@ -1,7 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function Header() {
+  const [value, setValue] = useState('');
+  const navi = useNavigate();
+
+  function onChangeValue(e) {
+    setValue(e.target.value);
+  }
+
+  function onClickSearch(e) {
+    e.preventDefault();
+
+    navi('/search', { state: value });
+  }
+
   return (
     <>
       <header>
@@ -20,10 +34,16 @@ export function Header() {
               <Link to='/ETC'>ETC</Link>
             </li>
             <li>
-              <Link to='/community/notice' state={{ page: 'notice' }}>커뮤니티</Link>
+              <Link to='/community/notice' state='notice'>커뮤니티</Link>
             </li>
           </ul>
         </nav>
+        <div>
+          <form>
+            <input type="text" value={value} onChange={onChangeValue} />
+            <button type='submit' onClick={onClickSearch}>검색</button>
+          </form>
+        </div>
       </header>
     </>
   );

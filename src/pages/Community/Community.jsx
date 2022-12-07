@@ -4,7 +4,7 @@ import AppLayout from '../../layouts/AppLayout';
 import { setMetaData } from '../../utils/setMetaData';
 
 export function Community() {
-  const location = useLocation();
+  const { state } = useLocation();
 
   const routesData = {
     notice: {
@@ -34,7 +34,7 @@ export function Community() {
   };
 
   const meta = setMetaData({
-    ...routesData[location.state.page],
+    ...routesData[state],
   });
 
   return (
@@ -43,22 +43,22 @@ export function Community() {
         <div>
           <ul>
             <li>
-              <Link to='./notice' state={{ page: 'notice' }}>공지사항</Link>
+              <Link to='./notice' state='notice'>공지사항</Link>
             </li>
             <li>
-              <Link to='./guide' state={{ page: 'guide' }}>쇼핑몰 이용 가이드</Link>
+              <Link to='./guide' state='guide'>쇼핑몰 이용 가이드</Link>
             </li>
             <li>
-              <Link to='./visit' state={{ page: 'visit' }}>찾아오시는 길</Link>
+              <Link to='./visit' state='visit'>찾아오시는 길</Link>
             </li>
             <li>
-              <Link to='./question' state={{ page: 'question' }}>자주 묻는 질문</Link>
+              <Link to='./question' state='question'>자주 묻는 질문</Link>
             </li>
             <li>
-              <Link to='./review' state={{ page: 'review' }}>구매후기</Link>
+              <Link to='./review' state='review'>구매후기</Link>
             </li>
             <li>
-              <Link to='./direct' state={{ page: 'direct' }}>1:1 문의</Link>
+              <Link to='./direct' state='direct'>1:1 문의</Link>
             </li>
           </ul>
         </div>
