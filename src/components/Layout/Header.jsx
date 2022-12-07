@@ -20,7 +20,7 @@ export function Header() {
               <Link to='/ETC'>ETC</Link>
             </li>
             <li>
-              <Link to='/community'>커뮤니티</Link>
+              <Link to='/community/notice' state={{ page: 'notice' }}>커뮤니티</Link>
             </li>
           </ul>
         </nav>

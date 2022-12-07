@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default function Notice() {
+export function Notice() {
+
   return (
     <>
       <div>Notice</div>

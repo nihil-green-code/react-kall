@@ -14,6 +14,8 @@ export function Meta({ meta }) {
         {description && <meta name='description' content={description} />}
         {keywords && <meta name='keywords' content={keywords} />}
         <link rel='canonical' href={siteURL} />
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
       </Helmet>
     </>
   );
